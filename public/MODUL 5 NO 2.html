@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>Fungsi Terbilang</title>
+</head>
+<body>
+
+KONVERSI ANGKA KE HURUF
+
+<form action="2.php" method="post">
+Bilangan Angka: <input type="text" value="" name="angka" placeholder="Masukkan angka!">
+<br>
+<input type="submit" value="Proses">
+</form>
+</div></td><td>
+
+<?php
+$angka = isset($_POST['angka']) ? $_POST['angka'] : "0";
+if ($angka)
+{
+        echo number_format($angka, 0) ."</br>";
+        echo ucwords(''.Terbilang($angka).'');
+}
+?>
+<h2>
+</div></td></tr></table>
+</body>
+</html>
+<?php
+function Terbilang($x)
+{
+  $abil = array("", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan", "sepuluh", "sebelas");
+  if ($x < 12)
+    return " " . $abil[$x];
+  elseif ($x < 20)
+    return Terbilang($x - 10) . "belas";
+  elseif ($x < 100)
+    return Terbilang($x / 10) . " puluh" . Terbilang($x % 10);
+  elseif ($x < 200)
+    return " seratus" . Terbilang($x - 100);
+  elseif ($x < 1000)
+    return Terbilang($x / 100) . " ratus" . Terbilang($x % 100);
+  elseif ($x < 2000)
+    return " seribu" . Terbilang($x - 1000);
+  elseif ($x < 1000000)
+    return Terbilang($x / 1000) . " ribu" . Terbilang($x % 1000);
+  elseif ($x < 1000000000)
+    return Terbilang($x / 1000000) . " juta" . Terbilang($x % 1000000);
+   
+   
+}
+
+?>

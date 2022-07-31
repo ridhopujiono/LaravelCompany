@@ -1,0 +1,46 @@
+<html>
+ <head>
+	<title>Pendaftaran</title>
+	</head>
+<body>
+
+ <table border="1" align=center>
+	
+	<?Php
+		$nama = $_POST["nama"];
+		$username = $_POST["username"];
+		$password = $_POST["password"];
+		$jk = $_POST["jk"];
+		$ttl = $_POST["tanggal"];
+		$progamstudi = $_POST["Progam Studi"];
+		$email = $_POST["email"];
+		$alamat = $_POST["alamat"];
+	?>	  
+	<table>
+	<tr><td>Nama</td><td> : </td>
+		<td><?=$nama?></td></tr>
+	<tr><td>Username</td><td> : </td>
+		<td><?=$username?></td></tr>
+    <tr><td>Password</td><td> : </td>
+		<td><?=$password?></td></tr>
+	 <tr><td>Jenis Kelamin</td><td> : </td>
+		<td><?=$jk?></td></tr>
+	<tr><td>Tanggal Lahir</td><td> : </td>
+		<td><?=$ttl?></td></tr>
+	<tr><td>Progam Studi</td><td> : </td>
+		<td><?=$progamstudi?></td></tr>
+	<tr><td>Email</td><td> : </td>
+		<td><?=$email?></td></tr>
+	<tr><td>Alamat</td><td> : </td>
+		<td><?=$alamat?></td></tr>
+	</table>
+	</td></tr>
+	<tr bgcolor=yellow><th><a href="page1.html">Beranda</a></th></tr>
+	<tr bgcolor=yellow><th><a href="page2.html">Elektronik</a></th></tr>
+	<tr bgcolor=yellow><th><a href="page3.html">Makanan</a></th></tr>
+	<tr bgcolor=yellow><th><a href="page4.html">Kesehatan</a></th></tr>
+	<tr bgcolor=yellow><th><a href="2.html">Pendaftaran</a></th></tr>
+	
+</table>
+</body>
+</html>
